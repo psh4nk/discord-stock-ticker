@@ -9,14 +9,14 @@ import (
 )
 
 const (
-	SolanaURL = "https://api.dexlab.space/v1/trades/%s/24h"
+	SolanaURL = "https://api.dexlab.space/v1/prices/%s/last"
 )
 
 type DexLabPrice struct {
 	Success bool `json:"success"`
 	Data    []struct {
 		Orderid       string    `json:"orderId"`
-		Price         string    `json:"price"`
+		Price         float64   `json:"price"`
 		Size          string    `json:"size"`
 		Market        string    `json:"market"`
 		Side          string    `json:"side"`
